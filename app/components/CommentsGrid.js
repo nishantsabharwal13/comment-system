@@ -1,7 +1,8 @@
 var React = require('react');
+
 var CommentsGrid=React.createClass({
 textToLink: function(content){
-  var finalContent=textToLink(content);
+  var finalContent=content;
   return {__html: finalContent}
 },
 render: function(){

@@ -3,7 +3,7 @@ var CommentBlock = require('./CommentBlock');
 
 var WallUpdates=React.createClass({
 textToLink: function(content){
-  var finalContent=textToLink(content);
+  var finalContent=content;
   return {__html: finalContent}
 },
 render:function(){
