@@ -21,6 +21,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nishantsabharwal13/comment-system.git"
-  }
+    "url": "git+ssh://git@github.com/nishantsabharwal13/comment-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nishantsabharwal13/comment-system/issues"
+  },
+  "homepage": "https://github.com/nishantsabharwal13/comment-system#readme"
 }
