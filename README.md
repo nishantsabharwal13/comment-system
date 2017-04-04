@@ -1,6 +1,6 @@
 # Comment system using ReactJS and Webpack
 
-This is a demo of comment system developed on ReactJS with webpack as the module bundler. Like and edit feature coming soon.
+This is a demo of comment system developed on ReactJS with webpack as the module bundler.
 
 # Establic a web server
 
