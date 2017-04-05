@@ -4,7 +4,7 @@ This is a demo of comment system developed on ReactJS with webpack as the module
 
 # Establic a web server
 
-Use Nginx/Apache2 with php enabled.
+Use Nginx/Apache2 with php enabled for local storage api interaction.
 
 # NPM install
 
