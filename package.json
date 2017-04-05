@@ -2,7 +2,7 @@
   "name": "comments",
   "version": "1.0.0",
   "description": "Commenting system using reactJS",
-  "main": "app2.js",
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "axios": "^0.16.0",

@@ -29,12 +29,12 @@ echo '{
         {
           "com_id": "72",
           "uid_fk": "221",
-          "comment": "Should include edit option",
+          "comment": "Edit and like features coming soon",
           "created": "1469053420",
           "like_count": "0",
           "uploads": "",
-          "username": "umair",
-          "name": "Umair Chib",
+          "username": "nishant",
+          "name": "Nishant Sabharwal",
           "profile_pic": "https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/14462911_10154633447830087_4978973781409464502_n.jpg?oh=23626f0cf7d2f4a903c37914d3e3ab33&oe=5995734C",
           "timeAgo": "2016-07-21T00:23:40+02:00"
         }
