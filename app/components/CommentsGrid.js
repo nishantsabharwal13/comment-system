@@ -12,9 +12,11 @@ return(
     <img src={comment.profile_pic} className="commentImg" /> 
         <div className="commentText"> 
           <b>{comment.name}</b> 
-          <a href="javascript:void(0)"  data={comment.com_id} className="commetDelete" onClick={this.props.deleteComment} value={index} >X</a>
           <div> 
          <span dangerouslySetInnerHTML={this.textToLink(comment.comment)}  />  
+          </div>
+          <div className="deleteReply">
+          <a href="javascript:void(0)"  data={comment.com_id} className="commetDelete" onClick={this.props.deleteComment} value={index} >Delete</a>
           </div>
         </div>
     </div>

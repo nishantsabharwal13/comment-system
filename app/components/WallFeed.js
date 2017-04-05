@@ -46,7 +46,7 @@ deleteUpdate: function(e)
   var data='updateID='+update_id;
   var reactThis=this;
 
-  axios.post('php/deleteUpdate.php',data)
+  axios.post('api/deleteUpdate.php',data)
   .then(function (data) {
     reactThis.state.data.splice(updateIndex,1);
     reactThis.setState({data: reactThis.state.data});

@@ -4,7 +4,7 @@ var WallContainer=React.createClass({
    render:function(){
     return(
     <div id="wallContainer">
-     <WallFeed url="php/newsFeed.php" postUrl="php/updateFeed.php" deleteUrl="php/deleteUpdate.php"/>
+     <WallFeed url="api/newsFeed.php" postUrl="api/updateFeed.php" deleteUrl="api/deleteUpdate.php"/>
     </div>
     );
    }

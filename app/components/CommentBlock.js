@@ -17,7 +17,7 @@ var CommentBlock=React.createClass({
     var reactThis=this;
     var data='updateID='+update_id+'&user_comment='+data.user_comment;
 
-    axios.post('php/updateComment.php',data)
+    axios.post('api/updateComment.php',data)
     .then(function (data) {
      var comments = reactThis.state.dataComments;
      var newComments = comments.concat([data.data.comments[0]]);
@@ -39,7 +39,7 @@ var CommentBlock=React.createClass({
     if(this.state.showComment)
     {
 
-      return (<CommentForm postUrl="php/updateComment.php" onCommentSubmit={this.commentAjaxSubmit} />)
+      return (<CommentForm postUrl="api/updateComment.php" onCommentSubmit={this.commentAjaxSubmit} />)
     }
   },
   deleteComment: function(e) 
@@ -52,7 +52,7 @@ var CommentBlock=React.createClass({
     var reactThis=this;
     var data='updateID='+update_id+'&commentID='+com_id;
 
-    axios.post('php/deleteComment.php',data)
+    axios.post('api/deleteComment.php',data)
     .then(function (data) {
       reactThis.state.dataComments.splice(commentIndex,1);
       reactThis.setState({dataComments: reactThis.state.dataComments});
@@ -67,7 +67,7 @@ var CommentBlock=React.createClass({
     return <div ><div className="feedLinks">
     <a href="javascript:void(0)"  onClick={this.commentLink}>Reply</a></div>
     {this.renderCommentForm()}
-    <CommentsGrid dataComments={this.state.dataComments} deleteComment={this.deleteComment} postUrl="php/deleteComment.php"/>
+    <CommentsGrid dataComments={this.state.dataComments} deleteComment={this.deleteComment} postUrl="api/deleteComment.php"/>
 
     </div> 
   }

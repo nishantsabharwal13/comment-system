@@ -21804,7 +21804,7 @@
 	    return React.createElement(
 	      'div',
 	      { id: 'wallContainer' },
-	      React.createElement(WallFeed, { url: 'php/newsFeed.php', postUrl: 'php/updateFeed.php', deleteUrl: 'php/deleteUpdate.php' })
+	      React.createElement(WallFeed, { url: 'api/newsFeed.php', postUrl: 'api/updateFeed.php', deleteUrl: 'api/deleteUpdate.php' })
 	    );
 	  }
 	});
@@ -21859,7 +21859,7 @@
 	    var data = 'updateID=' + update_id;
 	    var reactThis = this;
 
-	    axios.post('php/deleteUpdate.php', data).then(function (data) {
+	    axios.post('api/deleteUpdate.php', data).then(function (data) {
 	      reactThis.state.data.splice(updateIndex, 1);
 	      reactThis.setState({ data: reactThis.state.data });
 	    }).catch(function (error) {
@@ -22000,7 +22000,7 @@
 	    var reactThis = this;
 	    var data = 'updateID=' + update_id + '&user_comment=' + data.user_comment;
 
-	    axios.post('php/updateComment.php', data).then(function (data) {
+	    axios.post('api/updateComment.php', data).then(function (data) {
 	      var comments = reactThis.state.dataComments;
 	      var newComments = comments.concat([data.data.comments[0]]);
 	      reactThis.setState({ dataComments: newComments });
@@ -22016,7 +22016,7 @@
 	  renderCommentForm: function renderCommentForm() {
 	    if (this.state.showComment) {
 
-	      return React.createElement(CommentForm, { postUrl: 'php/updateComment.php', onCommentSubmit: this.commentAjaxSubmit });
+	      return React.createElement(CommentForm, { postUrl: 'api/updateComment.php', onCommentSubmit: this.commentAjaxSubmit });
 	    }
 	  },
 	  deleteComment: function deleteComment(e) {
@@ -22028,7 +22028,7 @@
 	    var reactThis = this;
 	    var data = 'updateID=' + update_id + '&commentID=' + com_id;
 
-	    axios.post('php/deleteComment.php', data).then(function (data) {
+	    axios.post('api/deleteComment.php', data).then(function (data) {
 	      reactThis.state.dataComments.splice(commentIndex, 1);
 	      reactThis.setState({ dataComments: reactThis.state.dataComments });
 	    }).catch(function (error) {
@@ -22049,7 +22049,7 @@
 	        )
 	      ),
 	      this.renderCommentForm(),
-	      React.createElement(CommentsGrid, { dataComments: this.state.dataComments, deleteComment: this.deleteComment, postUrl: 'php/deleteComment.php' })
+	      React.createElement(CommentsGrid, { dataComments: this.state.dataComments, deleteComment: this.deleteComment, postUrl: 'api/deleteComment.php' })
 	    );
 	  }
 	});
@@ -22085,14 +22085,18 @@
 	            comment.name
 	          ),
 	          React.createElement(
-	            "a",
-	            { href: "javascript:void(0)", data: comment.com_id, className: "commetDelete", onClick: this.props.deleteComment, value: index },
-	            "X"
-	          ),
-	          React.createElement(
 	            "div",
 	            null,
 	            React.createElement("span", { dangerouslySetInnerHTML: this.textToLink(comment.comment) })
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "deleteReply" },
+	            React.createElement(
+	              "a",
+	              { href: "javascript:void(0)", data: comment.com_id, className: "commetDelete", onClick: this.props.deleteComment, value: index },
+	              "Delete"
+	            )
 	          )
 	        )
 	      );

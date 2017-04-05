@@ -115,7 +115,11 @@ textarea , input{
     padding-left:10px;
 }
 .commetDelete {
-    float: right;
+        color: #2f9bdb;
+    font-size: 13px;
+}
+.deleteReply{
+    margin-top:5px;
 }
 .commetDelete,
 .feedDelete,
