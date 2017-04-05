@@ -151,7 +151,8 @@ b{
     border: 0;
     padding-left: 1px;
 }
-.feedText span,.commentText span {
+.feedText span, 
+.commentText span {
     color: grey;
     font-size: 13px;
 }
